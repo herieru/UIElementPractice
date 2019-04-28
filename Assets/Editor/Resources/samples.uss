@@ -4,10 +4,19 @@ Label {
     text-color: rgb(68, 138, 255);
 }
 
-Button{
-	font-size:25;
-
-	heigth:50;
-	font-weight:bold;
+Button
+{
+	padding:10,20,10,20;
+	font-size:12;
+	height:50;
+	width:300;
 	text-color:rgb(68, 138, 255);
+	text-background-color:rgb(40,40,40);
+	background-color:rgb(255,20,20);
+}
+
+
+Button:hover
+{
+	text-color:rgb(190,99,120); 
 }
