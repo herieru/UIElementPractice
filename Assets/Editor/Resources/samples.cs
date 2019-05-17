@@ -25,11 +25,21 @@ public class samples : EditorWindow
         label2.text = "Hello World! From C#";
         root.Add(label2);
 
+        var boxes = new VisualElement
+        {
+            name = "boxesContainer"
+        };
+        boxes.AddToClassList("horizontalContainer");
+        boxes.Add(new VisualElement { style = { backgroundColor = Color.blue } });
+        boxes.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
+        boxes.Add(new VisualElement { style = { backgroundColor = Color.green } });
+        root.Add(boxes);
 
         // Import UXML
         var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/Resources/samples.uxml");
         VisualElement labelFromUXML = visualTree.CloneTree();
         root.Add(labelFromUXML);
+       
 
         // A stylesheet can be added to a VisualElement.
         // The style will be applied to the VisualElement and all of its children.
@@ -37,6 +47,8 @@ public class samples : EditorWindow
         VisualElement labelWithStyle = new Label("Hello World! With Style");
         labelWithStyle.styleSheets.Add(styleSheet);
         root.Add(labelWithStyle);
+
+        root.styleSheets.Add(styleSheet);
 
 
         var button = new Button();

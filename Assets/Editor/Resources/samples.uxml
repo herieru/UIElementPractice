@@ -14,5 +14,6 @@ xsi:schemaLocation="
 >
     <engine:Label text="Hello World! From UXML" />
   <engine:Label text ="やったでた"/>
-  <engine:Button name="button" text="このボタンを押す"/>
+  <engine:Button id ="button1" name="button" text="このボタンを押す"/>
+
 </engine:UXML>
