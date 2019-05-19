@@ -21,7 +21,15 @@ public class boxesSamples : EditorWindow
         // A stylesheet can be added to a VisualElement.
         // The style will be applied to the VisualElement and all of its children.
         var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Editor/Resources/UIElementSamples/BoxesSamples/boxesSamples.uss");
-        root.styleSheets.Add(styleSheet);
+        if (null != styleSheet)
+        {
+            root.styleSheets.Add(styleSheet);
+
+        }
+        else
+        {
+            Debug.Log("スタイルシートが取得できない");
+        }
 
 
         //ラベルの要素を使うためのもの
@@ -38,6 +46,16 @@ public class boxesSamples : EditorWindow
         boxHorizontal.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
         boxHorizontal.Add(new VisualElement { style = { backgroundColor = Color.green } });
 
+        VisualElement boxVertical = new VisualElement
+        {
+            name = "verticalBox"
+        };
+        
+        boxVertical.Add(new VisualElement { style = { backgroundColor = Color.red } });
+        boxVertical.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
+        boxVertical.Add(new VisualElement { style = { backgroundColor = Color.green } });
+        boxHorizontal.Add(boxVertical);
+
         root.Add(boxHorizontal);
 
         Button button = new Button
@@ -51,6 +69,8 @@ public class boxesSamples : EditorWindow
 
         //操作的な部分を追加する
         //root.AddManipulator();
+
+        
     }
 
 
