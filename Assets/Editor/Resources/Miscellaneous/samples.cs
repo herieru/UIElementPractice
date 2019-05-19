@@ -29,17 +29,29 @@ public class samples : EditorWindow
         {
             name = "boxesContainer"
         };
+        var boxes2 = new VisualElement()
+        {
+            name ="boxes2Container"
+        };
+        
+        //â°ï¿Ç—Ç…Ç∑ÇÈÅB
         boxes.AddToClassList("horizontalContainer");
         boxes.Add(new VisualElement { style = { backgroundColor = Color.blue } });
         boxes.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
         boxes.Add(new VisualElement { style = { backgroundColor = Color.green } });
-        root.Add(boxes);
 
-        // Import UXML
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/Resources/samples.uxml");
-        VisualElement labelFromUXML = visualTree.CloneTree();
-        root.Add(labelFromUXML);
-       
+        boxes2.AddToClassList("verticalContainer");
+        boxes2.Add(new VisualElement { style = { backgroundColor = Color.red } });
+        boxes2.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
+        boxes2.Add(new VisualElement { style = { backgroundColor = Color.green } });
+
+        //boxes.Add(boxes2);
+        root.Add(boxes);
+        root.Add(boxes2);
+        
+        
+
+   
 
         // A stylesheet can be added to a VisualElement.
         // The style will be applied to the VisualElement and all of its children.

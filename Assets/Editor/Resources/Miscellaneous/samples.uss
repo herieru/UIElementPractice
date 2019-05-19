@@ -31,6 +31,16 @@ Button:hover
     flex-direction: row;
 }
 
+.verticalContainer{
+	margin-left: 50;
+    margin-top: 50;
+    margin-right: 50;
+    margin-bottom: 50;
+    flex-direction: row;
+}
+
+
+
 #boxesContainer {
     padding-left: 10;
     padding-top: 10;
@@ -44,6 +54,13 @@ Button:hover
     width: 100;
     height: 100;
 }
+
+#boxes2Container > VisualElement{
+	width:100;
+	height:200;
+}
+
+
 
 #2Plus1Container {
     height: 100;
