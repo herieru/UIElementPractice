@@ -53,7 +53,7 @@ public class boxesSamples : EditorWindow
         
         boxVertical.Add(new VisualElement { style = { backgroundColor = Color.red } });
         boxVertical.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
-        boxVertical.Add(new VisualElement { style = { backgroundColor = Color.green } });
+        boxVertical.Add(new VisualElement { style = { backgroundColor = Color.white } });
         boxHorizontal.Add(boxVertical);
 
         root.Add(boxHorizontal);
@@ -62,8 +62,12 @@ public class boxesSamples : EditorWindow
         {
             text = "ボタンクリック",
         };
+        var clickEvent = new ClickEvent();
+        clickEvent.target = button;
 
-        button.clickable.clicked += ()=> { Debug.Log("ボタンをおした"); };
+        button.clickable.clicked   += ()=> { Debug.Log("ボタンをおした"); };
+
+
 
         root.Add(button);
 
@@ -71,6 +75,20 @@ public class boxesSamples : EditorWindow
         //root.AddManipulator();
 
         
+    }
+
+
+    public class ClickEvent : MouseManipulator
+    {
+        protected override void RegisterCallbacksOnTarget()
+        {
+            Debug.Log("aaa");
+        }
+
+        protected override void UnregisterCallbacksFromTarget()
+        {
+            Debug.Log("bbb");
+        }
     }
 
 
