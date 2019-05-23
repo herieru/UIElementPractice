@@ -40,8 +40,18 @@ public class boxesSamples : EditorWindow
         {
             name = "horizontalBox"
         };
+        //テキストを入れるもの
+        VisualElement boxElement = new VisualElement
+        {
+            name = "textBox"
+        };
+
+        boxElement.Add(new Label("これはこれは"));
+        boxElement.Add(new Button { text = "ここを押せるよ" });
+
 
         boxHorizontal.AddToClassList("horizontalContainer");
+        boxHorizontal.Add(boxElement);
         boxHorizontal.Add(new VisualElement { style = { backgroundColor = Color.blue } });
         boxHorizontal.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
         boxHorizontal.Add(new VisualElement { style = { backgroundColor = Color.green } });
@@ -50,6 +60,8 @@ public class boxesSamples : EditorWindow
         {
             name = "verticalBox"
         };
+
+
         
         boxVertical.Add(new VisualElement { style = { backgroundColor = Color.red } });
         boxVertical.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
@@ -70,9 +82,6 @@ public class boxesSamples : EditorWindow
 
 
         root.Add(button);
-
-        //操作的な部分を追加する
-        //root.AddManipulator();
 
         
     }

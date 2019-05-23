@@ -1,6 +1,5 @@
 
-
-
+/*-- align-selfはこの要素の開始位置からの位置調整 --*/
 #horizontalBox {
     padding-left: 10;
     padding-top: 10;
@@ -10,25 +9,23 @@
     align-self: flex-start;
 }
 
-
-
-
-
 /*-- flex-direction:rowが方向 --*/
+/*-- rowは横方向　--*/
 .horizontalContainer {
     margin-left: 100;
     margin-top: 50;
     margin-right: 20;
     margin-bottom: 50;
 	flex-direction: row;
-
 }
 
 #horizontalBox > VisualElement
 {
+	margin-left:5;
 	width:120;
 	height:120;
 }
+
 
 #verticalBox{
 	padding-left:5
@@ -44,7 +41,3 @@
 	height:30;
 }
 
-#verticalBox > VisualElement:hover
-{
-	background-color:rgb(111,111,111);
-}

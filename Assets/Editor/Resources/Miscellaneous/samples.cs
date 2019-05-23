@@ -40,6 +40,7 @@ public class samples : EditorWindow
         boxes.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
         boxes.Add(new VisualElement { style = { backgroundColor = Color.green } });
 
+        //ècï¿Ç—ÇçsÇ§
         boxes2.AddToClassList("verticalContainer");
         boxes2.Add(new VisualElement { style = { backgroundColor = Color.red } });
         boxes2.Add(new VisualElement { style = { backgroundColor = Color.yellow } });
